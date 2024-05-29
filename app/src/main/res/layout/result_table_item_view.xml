@@ -1,0 +1,811 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/inTable_scroller">
+
+    <TextView
+        android:id="@+id/semester_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/semester_bar_color"
+        android:fontFamily="sans-serif-light"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="8dp"
+        android:text="Học kỳ 1 - Năm học 2021-2022"
+        android:textColor="@color/black"
+        android:textSize="21dp"
+        android:textStyle="bold"/>
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TableLayout
+            android:id="@+id/result_table"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/grid_table_style_hor"
+            android:showDividers="middle"
+            android:background="@drawable/table_style">
+
+            <TableRow
+                android:id="@+id/table_header"
+                android:divider="@drawable/grid_table_style_ver"
+                android:showDividers="middle">
+
+                <TextView
+                    android:textColor="@color/table_text_color"
+                    android:background="@color/header_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="STT" />
+
+                <TextView
+                    android:textColor="@color/table_text_color"
+                    android:background="@color/header_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="Tên học phần" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:background="@color/header_table_color"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="Số tín chỉ"
+                    android:textColor="@color/table_text_color" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:background="@color/header_table_color"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="Tổng kết (Số)"
+                    android:textColor="@color/table_text_color" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:background="@color/header_table_color"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="Tổng kết (Chữ)"
+                    android:textColor="@color/table_text_color" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:background="@color/header_table_color"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="Xem chi tiết"
+                    android:textColor="@color/table_text_color" />
+            </TableRow>
+
+            <TableRow
+                android:divider="@drawable/grid_table_style_ver"
+                android:showDividers="middle">
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="1" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="Kiến trúc máy tính" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="3" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="8.3" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="B" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="Xem"
+                    android:textColor="@color/app_color"
+                    android:textStyle="bold"/>
+            </TableRow>
+
+            <TableRow
+                android:divider="@drawable/grid_table_style_ver"
+                android:showDividers="middle">
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="1" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="Kiến trúc máy tính" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="3" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="8.3" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="B" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="Xem"
+                    android:textColor="@color/app_color"
+                    android:textStyle="bold"/>
+            </TableRow>
+
+            <TableRow
+                android:divider="@drawable/grid_table_style_ver"
+                android:showDividers="middle">
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="1" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="Kiến trúc máy tính" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="3" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="8.3" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="B" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="Xem"
+                    android:textColor="@color/app_color"
+                    android:textStyle="bold"/>
+            </TableRow>
+
+            <TableRow
+                android:divider="@drawable/grid_table_style_ver"
+                android:showDividers="middle">
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="1" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="Kiến trúc máy tính" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="3" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="8.3" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="B" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="Xem"
+                    android:textColor="@color/app_color"
+                    android:textStyle="bold"/>
+            </TableRow>
+
+            <TableRow
+                android:divider="@drawable/grid_table_style_ver"
+                android:showDividers="middle">
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="1" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="Kiến trúc máy tính" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="3" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="8.3" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="B" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="Xem"
+                    android:textColor="@color/app_color"
+                    android:textStyle="bold"/>
+            </TableRow>
+
+            <TableRow
+                android:divider="@drawable/grid_table_style_ver"
+                android:showDividers="middle">
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="1" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="Kiến trúc máy tính" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="3" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="8.3" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="B" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="Xem"
+                    android:textColor="@color/app_color"
+                    android:textStyle="bold"/>
+            </TableRow>
+
+            <TableRow
+                android:divider="@drawable/grid_table_style_ver"
+                android:showDividers="middle">
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="1" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="Kiến trúc máy tính" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="3" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="8.3" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="B" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="Xem"
+                    android:textColor="@color/app_color"
+                    android:textStyle="bold"/>
+            </TableRow>
+
+            <TableRow
+                android:divider="@drawable/grid_table_style_ver"
+                android:showDividers="middle">
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="1" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="Kiến trúc máy tính" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="3" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="8.3" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="B" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="Xem"
+                    android:textColor="@color/app_color"
+                    android:textStyle="bold"/>
+            </TableRow>
+
+            <TableRow
+                android:divider="@drawable/grid_table_style_ver"
+                android:showDividers="middle">
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="1" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="Kiến trúc máy tính" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="3" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="8.3" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="B" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="Xem"
+                    android:textColor="@color/app_color"
+                    android:textStyle="bold"/>
+            </TableRow>
+
+            <TableRow
+                android:divider="@drawable/grid_table_style_ver"
+                android:showDividers="middle">
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="1" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="Kiến trúc máy tính" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="3" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="8.3" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="B" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="Xem"
+                    android:textColor="@color/app_color"
+                    android:textStyle="bold"/>
+            </TableRow>
+
+            <TableRow
+                android:divider="@drawable/grid_table_style_ver"
+                android:showDividers="middle">
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="1" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="Kiến trúc máy tính" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="3" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="8.3" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="B" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="Xem"
+                    android:textColor="@color/app_color"
+                    android:textStyle="bold"/>
+            </TableRow>
+
+            <TableRow
+                android:divider="@drawable/grid_table_style_ver"
+                android:showDividers="middle">
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="1" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="Kiến trúc máy tính" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="3" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="8.3" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="B" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="Xem"
+                    android:textColor="@color/app_color"
+                    android:textStyle="bold"/>
+            </TableRow>
+
+            <TableRow
+                android:divider="@drawable/grid_table_style_ver"
+                android:showDividers="middle">
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="1" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="Kiến trúc máy tính" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="3" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="8.3" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="B" />
+
+                <TextView
+                    android:background="@color/body_table_color"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/padding_table_hor"
+                    android:paddingVertical="@dimen/padding_table_ver"
+                    android:text="Xem"
+                    android:textColor="@color/app_color"
+                    android:textStyle="bold"/>
+            </TableRow>
+
+        </TableLayout>
+    </HorizontalScrollView>
+
+</LinearLayout>
